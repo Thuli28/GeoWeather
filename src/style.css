@@ -1,0 +1,11 @@
+/* weather app */
+.weather-app {
+  background-image: url("../images/streetlight-cloudy-day.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* app name */
+h1 {
+  color: blue;
+}
