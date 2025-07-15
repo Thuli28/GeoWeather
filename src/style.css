@@ -1,11 +1,55 @@
 /* weather app */
 .weather-app {
+  color: white;
   background-image: url("../images/streetlight-cloudy-day.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  text-align: center;
+  width: 800px;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 /* app name */
-h1 {
-  color: blue;
+/* search-engine */
+.search-input {
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 6px;
+}
+.search-button {
+  font-size: 15px;
+  border-radius: 10px;
+  color: white;
+  background: blue;
+  padding: 6px;
+}
+/* current */
+.current-city {
+  font-size: 30px;
+  margin-bottom: 2px;
+}
+.current-date {
+  font-size: 20px;
+  margin-top: 0;
+}
+.current-temperature {
+  margin: 0;
+  font-size: 45px;
+}
+.weather-conditions {
+  font-size: 25px;
+}
+/* current details */
+.current-details {
+  margin: 20px auto;
+  width: 200px;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(39, 39, 59);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
 }
