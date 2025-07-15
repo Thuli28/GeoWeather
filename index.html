@@ -6,42 +6,44 @@
     <title>Weather App</title>
   </head>
   <body>
-    <h1 class="headingName">Geo Weather App</h1>
-    <header class="searchEngine">
-      <form id="search-form">
-        <input
-          type="search"
-          placeholder="Seach: City"
-          required
-          class="search-input"
-          id="search-input"
-        />
-        <input type="submit" value="Search" class="search-button" />
-      </form>
-    </header>
-    <div class="current-weather">
-      <div>
-        <h2 class="current-city">Paris</h2>
-        <h2 class="current-date">Friday, July 12</h2>
-        <h1 class="current-temp-emoji">☀</h1>
-        <span class="current-temperature-value" id="current-temperature"
-          >24</span
-        ><span class="current-temperature-unit">°C</span>
-        <span class="weather-conditions"> Sunny </span>
+    <div class="weather-app">
+      <h1 class="headingName">Geo Weather App</h1>
+      <header class="searchEngine">
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Seach: City"
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <div class="current-weather">
+        <div>
+          <h2 class="current-city">Paris</h2>
+          <h2 class="current-date">Friday, July 12</h2>
+          <img src="images/sunny.png" alt="" class="current-temp-emoji" />
+          <span class="current-temperature-value" id="current-temperature"
+            >24</span
+          ><span class="current-temperature-unit">°C</span>
+          <span class="weather-conditions"> Sunny </span>
+        </div>
+        <div class="current-details">
+          <p>Huminity: 58% wind: 14km/h</p>
+        </div>
+        <footer>
+          <p>
+            This project was coded by
+            <a href="https://github.com/Thuli28" target="_blank"
+              >Malethola Raditsela</a
+            >
+            and is <a href="#" target="_blank"> on GitHub</a> and
+            <a href="#" target="_blank">hosted on Netlify</a>
+          </p>
+        </footer>
       </div>
-      <div class="current-details">
-        <p>Huminity: 58% wind: 14km/h</p>
-      </div>
-      <footer>
-        <p>
-          This project was coded by
-          <a href="https://github.com/Thuli28" target="_blank"
-            >Malethola Raditsela</a
-          >
-          and is <a href="#" target="_blank"> on GitHub</a> and
-          <a href="#" target="_blank">hosted on Netlify</a>
-        </p>
-      </footer>
     </div>
   </body>
 </html>
