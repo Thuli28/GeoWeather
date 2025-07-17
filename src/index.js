@@ -1,10 +1,21 @@
 function newWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
+  let huminityElement = document.querySelector("#huminity");
+  let huminity = response.data.temperature.humidity;
+  let windElement = document.querySelector("#wind");
+  let wind = response.data.wind.speed;
+  let weatherConditionElement = document.querySelector("#weather-condition");
+  let weatherCondition = response.data.condition.description;
+  let iconElement = document.querySelector("#icon");
+  let icon = response.data.condition.icon_url;
   let city = document.querySelector("#current-city");
   city.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
-
+  huminityElement.innerHTML = Math.round(huminity);
+  windElement.innerHTML = Math.round(wind);
+  weatherConditionElement.innerHTML = (weatherCondition);
+  iconElement.innerHTML = `<img src="${icon}" width="80">`;
 }
 function searchCity(city) {
   let apiKey = "5261f4be982ete699385co0647b7a120";
