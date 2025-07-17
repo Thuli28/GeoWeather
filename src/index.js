@@ -31,3 +31,17 @@ function searchEngine(event) {
 }
 let searchformElement = document.querySelector("#search-form");
 searchformElement.addEventListener("submit", searchEngine);
+function newDate() {
+  let now = new Date();
+
+  let nowDate = document.querySelector("#current-date");
+  let months =  ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let month = months[now.getMonth()];
+  let days =  [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
+  let day = days[now.getDay()];
+  let date = now.getDate();
+  let hours = now.getHours().toString().padStart(2,'0');
+  let minutes = now.getMinutes().toString().padStart(2,'0');
+  nowDate.innerHTML =`${day}, ${month} ${date}, ${hours}:${minutes}`;
+}
+newDate();
