@@ -1,8 +1,8 @@
 function newWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
-  let huminityElement = document.querySelector("#huminity");
-  let huminity = response.data.temperature.humidity;
+  let humidityElement = document.querySelector("#humidity");
+  let humidity = response.data.temperature.humidity;
   let windElement = document.querySelector("#wind");
   let wind = response.data.wind.speed;
   let weatherConditionElement = document.querySelector("#weather-condition");
@@ -12,9 +12,9 @@ function newWeather(response) {
   let city = document.querySelector("#current-city");
   city.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
-  huminityElement.innerHTML = Math.round(huminity);
+  humidityElement.innerHTML = Math.round(humidity);
   windElement.innerHTML = Math.round(wind);
-  weatherConditionElement.innerHTML = (weatherCondition);
+  weatherConditionElement.innerHTML = weatherCondition;
   iconElement.innerHTML = `<img src="${icon}" width="80">`;
 }
 function searchCity(city) {
