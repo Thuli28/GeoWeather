@@ -56,7 +56,8 @@ function getForecast(city) {
 }
 function displayForecast(response) {
  let forecastHTML = "";
- response.data.daily.forEach(function (day){
+ response.data.daily.forEach(function (day, index){
+  if (index < 5) {
   forecastHTML = forecastHTML + `
     <li>
             tuesday
@@ -67,6 +68,7 @@ function displayForecast(response) {
             <span class="low-temp">${Math.round(day.temperature.minimum)}°C</span>
           </li>
           `;
+  }
  }) ;
  let forecastElement = document.querySelector("#forecast");
  forecastElement.innerHTML = forecastHTML;
