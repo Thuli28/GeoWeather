@@ -61,7 +61,7 @@ function displayForecast(response) {
     <li>
             tuesday
             <br>
-            <img src="images/partly-cloudy.png" alt="" class="weather-icon">
+            <img src="${day.condition.icon_url}" alt="" class="weather-icon">
             <br>
             <span class="max-temp">${Math.round(day.temperature.maximum)}°C</span>
             <span class="low-temp">${Math.round(day.temperature.minimum)}°C</span>
