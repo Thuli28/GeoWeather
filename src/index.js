@@ -31,6 +31,7 @@ function searchEngine(event) {
 }
 let searchformElement = document.querySelector("#search-form");
 searchformElement.addEventListener("submit", searchEngine);
+searchCity("Paris");
 function newDate() {
   let now = new Date();
 
@@ -45,3 +46,23 @@ function newDate() {
   nowDate.innerHTML =`${day}, ${month} ${date}, ${hours}:${minutes}`;
 }
 newDate();
+function displayForecast() {
+let forecastElement = document.querySelector("#forecast");
+ let days =  [ "Friday", "Saturday", "Sunday", "Monday", "Tueday", ];
+ let forecastHTML = "";
+ days.forEach(function (day){
+  forecastHTML = forecastHTML + `
+    <li>
+            ${day}
+            <br>
+            <img src="images/partly-cloudy.png" alt="" class="weather-icon">
+            <br>
+            <span class="max-temp">19°C</span>
+            <span class="low-temp">13°C</span>
+          </li>
+          `;
+ }) ;
+ forecastElement.innerHTML = forecastHTML
+    
+}
+displayForecast();
