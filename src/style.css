@@ -71,7 +71,7 @@
   border-radius: 10px;
 }
 .weather-icon{
-  width: 30px;
+  width: 55px;
 }
 .low-temp, .max-temp{
   display: flex;
