@@ -15,7 +15,7 @@ function newWeather(response) {
   humidityElement.innerHTML = Math.round(humidity);
   windElement.innerHTML = Math.round(wind);
   weatherConditionElement.innerHTML = weatherCondition;
-  iconElement.innerHTML = `<img src="${icon}" width="80">`;
+  iconElement.innerHTML = `<img src="${icon}" width="150">`;
 
   getForecast(response.data.city);
 }
@@ -48,6 +48,12 @@ function newDate() {
   nowDate.innerHTML =`${day}, ${month} ${date}, ${hours}:${minutes}`;
 }
 newDate();
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days =  [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
+  
+  return(days[date.getDay()]);
+}
 function getForecast(city) {
   let apiKey = "5261f4be982ete699385co0647b7a120"
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`
@@ -60,7 +66,7 @@ function displayForecast(response) {
   if (index < 5) {
   forecastHTML = forecastHTML + `
     <li>
-            tuesday
+            ${formatDay(day.time)}
             <br>
             <img src="${day.condition.icon_url}" alt="" class="weather-icon">
             <br>
