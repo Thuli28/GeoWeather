@@ -55,19 +55,16 @@ function getForecast(city) {
   
 }
 function displayForecast(response) {
-  console.log(response.data)
-
- let days =  [ "Friday", "Saturday", "Sunday", "Monday", "Tueday", ];
  let forecastHTML = "";
- days.forEach(function (day){
+ response.data.daily.forEach(function (day){
   forecastHTML = forecastHTML + `
     <li>
-            ${day}
+            tuesday
             <br>
             <img src="images/partly-cloudy.png" alt="" class="weather-icon">
             <br>
-            <span class="max-temp">19°C</span>
-            <span class="low-temp">13°C</span>
+            <span class="max-temp">${Math.round(day.temperature.maximum)}°C</span>
+            <span class="low-temp">${Math.round(day.temperature.minimum)}°C</span>
           </li>
           `;
  }) ;
