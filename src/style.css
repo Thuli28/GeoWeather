@@ -73,3 +73,10 @@
 .weather-icon{
   width: 30px;
 }
+.low-temp, .max-temp{
+  display: flex;
+  color: black;
+}
+.low-temp{
+  color: grey;
+}
